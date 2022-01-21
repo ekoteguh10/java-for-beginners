@@ -4,34 +4,34 @@ public class KelinciKecil {
      * Fungsi untuk menghitung jumlah lompatan minimal yang diperlukan untuk mencapai target
      * @param posisiA
      * @param posisiB
-     * @param lompatanC
+     * @param lompatanTetapC
      * @return jumlah_lompatan
      */
-    static int hitung_jumlah_lompatan(int posisiA, int posisiB, int lompatanC) {
+    static int hitungJumlahLompatan(int posisiA, int posisiB, int lompatanTetapC) {
         
         // Initial jumlah lompatan
-        int jumlah_lompatan = 0;
+        int jumlahLompatan = 0;
         
         // Mengecek apakah titik awal posisi A kurang dari atau sama dengan titik posisi B
         while (posisiA <= posisiB) {
 
             // Jika True, maka:
-            posisiA += lompatanC; // 1. Titik awal posisi A akan ditambahkan dengan lompatan C
-            jumlah_lompatan += 1; // 2. Yang berarti bahwa si kelinci kecil sudah melompat sekali (ditambahkan satu lompatan)
+            posisiA += lompatanTetapC; // 1. Titik awal posisi A akan ditambahkan dengan lompatan C
+            jumlahLompatan += 1; // 2. Yang berarti bahwa si kelinci kecil sudah melompat sekali (ditambahkan satu lompatan)
 
         }
 
-        return jumlah_lompatan;
+        return jumlahLompatan;
     }
 
     public static void main (String[] args) {
         
         int posisiA = 10;
         int posisiB = 85;
-        int lompatanC = 30;
+        int lompatanTetapC = 30;
 
-        int jumlah_lompatan_minimal = hitung_jumlah_lompatan(posisiA, posisiB, lompatanC);
-        System.out.println("Jumlah lompatan minimal yang dibutuhkan kelinci kecil adalah " + jumlah_lompatan_minimal);
+        int jumlahLompatanMinimal = hitungJumlahLompatan(posisiA, posisiB, lompatanTetapC);
+        System.out.println("Jumlah lompatan minimal yang dibutuhkan kelinci kecil adalah " + jumlahLompatanMinimal);
     
     }
 
